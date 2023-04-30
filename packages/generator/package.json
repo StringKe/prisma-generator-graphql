@@ -35,10 +35,10 @@
     "ts-jest": "27.1.4",
     "typescript": "4.6.2"
   },
-  "homepage": "Link to homepage or github readme here",
+  "homepage": "https://github.com/StringKe/prisma-generator-graphql",
   "repository": {
     "type": "git",
-    "url": "Repo link here"
+    "url": "git@github.com:StringKe/prisma-generator-graphql.git"
   },
   "author": "stringke <authemail@qq.com>",
   "keywords": [
