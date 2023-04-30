@@ -38,7 +38,7 @@
   "homepage": "https://github.com/StringKe/prisma-generator-graphql",
   "repository": {
     "type": "git",
-    "url": "git@github.com:StringKe/prisma-generator-graphql.git"
+    "url": "https://github.com/StringKe/prisma-generator-graphql.git"
   },
   "author": "stringke <authemail@qq.com>",
   "keywords": [
