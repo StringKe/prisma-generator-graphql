@@ -4,11 +4,22 @@ datasource db {
 }
 
 model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+  id      Int       @id @default(autoincrement())
+  email   String    @unique
+  name    String?   @db.VarChar(255)
+  test    Json?
+  Account Account[]
 }
 
+model Account {
+  id     Int     @id @default(autoincrement())
+  email  String  @unique
+  name   String?
+  user   User?   @relation(fields: [userId], references: [id])
+  userId Int?
+}
+
+/// A Notification is a message sent to a user about activity on their posts or comments.
 enum NotificationType {
   newPosts
   newComments
@@ -19,6 +30,7 @@ enum NotificationType {
   heartOnReply
 }
 
+/// Language is a programming language that can be used to write code.
 enum Language {
   Typescript
   Javascript

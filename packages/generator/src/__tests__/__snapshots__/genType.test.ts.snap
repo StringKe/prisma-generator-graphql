@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`type generation: Account 1`] = `
+"type Account { 
+	id: Int!
+	email: String!
+	name: String
+	user: User
+	userId: Int
+ }
+"
+`;
+
+exports[`type generation: User 1`] = `
+"type User { 
+	id: Int!
+	email: String!
+	name: String
+	test: Json
+	Account: [Account]!
+ }
+"
+`;

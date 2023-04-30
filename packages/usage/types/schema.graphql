@@ -1,0 +1,48 @@
+scalar Json
+scalar DateTime
+
+enum NotificationType {
+  newPosts
+  newComments
+  newFollowers
+  reply
+  heartOnPost
+  heartOnComment
+  heartOnReply
+}
+
+enum Language {
+  Typescript
+  Javascript
+  Rust
+  Go
+  Python
+  Cpp
+}
+
+type User {
+  id: Int!
+  email: String!
+  name: String
+  test: Json
+  Account: [Account]!
+}
+
+type Account {
+  id: Int!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  user: User!
+  userId: Int!
+  provider: String!
+  providerId: String!
+  accessToken: String!
+  refreshToken: String!
+  accessTokenExpires: DateTime!
+  refreshTokenExpires: DateTime!
+  scopes: [String]!
+  profileUrl: String!
+  profileImage: String!
+  profileName: String!
+  profileEmail: String!
+}

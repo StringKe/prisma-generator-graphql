@@ -10,13 +10,13 @@ export const formatFile = (content: string): Promise<string> => {
       try {
         const formatted = prettier.format(content, {
           ...options,
-          parser: 'typescript',
+          parser: 'graphql',
         })
 
         res(formatted)
       } catch (error) {
         rej(error)
       }
-    })
+    }),
   )
 }

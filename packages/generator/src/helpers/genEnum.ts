@@ -1,7 +1,18 @@
 import { DMMF } from '@prisma/generator-helper'
+import { getComment } from '../utils/getComment'
 
-export const genEnum = ({ name, values }: DMMF.DatamodelEnum) => {
-  const enumValues = values.map(({ name }) => `${name}="${name}"`).join(',\n')
+/**
+ * generate graphql enum
+ * @param name
+ * @param values
+ * @param documentation
+ */
+export const genEnum = ({
+  name,
+  values,
+  documentation,
+}: DMMF.DatamodelEnum) => {
+  const enumValues = values.map(({ name }) => `\t${name}`).join('\n')
 
-  return `enum ${name} { \n${enumValues}\n }`
+  return `${getComment(documentation)}\nenum ${name} { \n${enumValues}\n }\n`
 }

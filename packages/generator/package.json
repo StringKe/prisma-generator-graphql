@@ -1,6 +1,6 @@
 {
-  "name": "prisma-generator-graphql",
-  "description": "Provide a description about your generator",
+  "name": "@stringke/prisma-generator-graphql",
+  "description": "A generator graphql schema from prisma schema",
   "version": "1.0.0",
   "main": "dist/generator.js",
   "license": "MIT",
@@ -40,7 +40,7 @@
     "type": "git",
     "url": "Repo link here"
   },
-  "author": "Your Name <Your Email>",
+  "author": "stringke <authemail@qq.com>",
   "keywords": [
     "prisma",
     "prisma2",
